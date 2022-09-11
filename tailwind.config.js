@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-      'hero-pattern': "url('/assets/images/hero.png')",
+        'hero-pattern': "url('/assets/images/hero.png')",
+        'store': "url('/assets/images/tienda.jpg')",
       }
-  },
+    },
   },
   plugins: [],
 }
