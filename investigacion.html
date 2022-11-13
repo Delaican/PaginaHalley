@@ -11,38 +11,41 @@
 
 <body>
     <div>
-        <header class="bg-[#F0F0F0] bg-opacity-80">
+        <header class="bg-[#F0F0F0] bg-opacity-80 relative">
             <nav class="container mx-auto px-6 py-2">
                 <div class="flex items-center justify-between">
                     <!-- logo -->
                     <div>
                         <a href="index.html">
-                            <img src="assets/images/halley_logo.png" alt="logo" class="h-24 object-cover" />
+                            <img src="assets/images/halley_logo.png" alt="logo" class="h-24 object-contain" />
                         </a>
-
+                    </div>
+                    <!-- mobile menu -->
+                    <div class="flex lg:hidden">
+                        <svg onclick="openMenu();" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </div>
                     <!-- menu items -->
-
-                    <div class="flex justify-between items-center">
-                        <div class="space-x-6 flex-1 font-medium">
-                            <a href="divulgacion.html" class="hover:text-zinc-600">
+                    <div id="menu" class="lg:flex hidden justify-between absolute lg:top-0 top-28 lg:relative bg-[#F0F0F0] lg:bg-none w-full lg:w-auto left-0 p-6 lg:p-0 z-50">
+                        
+                        <div class="lg:space-x-6 lg:flex-row flex-col flex font-medium">
+                            <a href="divulgacion.html" class="hover:text-zinc-600 lg:mb-0 mb-8">
                                 Divulgación
                             </a>
-                            <a href="#" class="hover:text-zinc-600">
+                            <a href="#" class="hover:text-zinc-600 lg:mb-0 mb-8">
                                 Investigación
                             </a>
-                            <a href="blog.html" class="hover:text-zinc-600">
+                            <a href="blog.html" class="hover:text-zinc-600 lg:mb-0 mb-8">
                                 Blog
                             </a>
-                            <a href="#" class="hover:text-zinc-600">
+                            <a href="#" class="hover:text-zinc-600 lg:mb-0 mb-8">
                                 Nosotros
                             </a>
-                            <a href="#" class="hover:text-zinc-600">
+                            <a href="#" class="hover:text-zinc-600 lg:mb-0 mb-8">
                                 Contacto
                             </a>
                         </div>
                         <!-- search -->
-                        <div class="ml-40 w-6">
+                        <div class="lg:ml-40 w-6">
                             <a href="#">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -54,6 +57,17 @@
                     </div>
                 </div>
             </nav>
+            <script>
+                function openMenu(){
+                    let menu = document.getElementById('menu');
+    
+                    if(menu.classList.contains('hidden')){
+                        menu.classList.remove('hidden');
+                    } else {
+                        menu.classList.add('hidden');
+                    }
+                }
+            </script>
         </header>
     </div>
     <section class="bg-[#3E5E75] text-[#F0F0F0]">
